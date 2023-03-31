@@ -2,7 +2,7 @@ document.getElementById('user-form').addEventListener('submit', async (e) => {
   e.preventDefault();
   const name = document.getElementById('name').value;
   const dob = document.getElementById('dob').value;
-  const apiUrl = 'https://yourusername.pythonanywhere.com/generate';
+  const apiUrl = 'danielschung.pythonanywhere.com/generate';
 
   try {
     const response = await fetch(apiUrl, {
