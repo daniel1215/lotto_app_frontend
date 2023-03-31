@@ -1,17 +1,20 @@
 document.getElementById('user-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const name = document.getElementById('name').value;
-  const dob = document.getElementById('dob').value;
-  const apiUrl = 'danielschung.pythonanywhere.com/generate';
-
-  try {
-    const response = await fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, dob }),
-    });
+    e.preventDefault();
+    const firstName = document.getElementById('first-name').value;
+    const lastName = document.getElementById('last-name').value;
+    const dob = document.getElementById('dob').value;
+    const apiUrl = 'https://danielschung.pythonanywhere.com/generate';
+  
+    // No need to split the name anymore, as we have separate input fields
+  
+    try {
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ firstName, lastName, dob }),
+      });
 
     if (response.ok) {
       const data = await response.json();

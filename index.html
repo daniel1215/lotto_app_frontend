@@ -9,12 +9,18 @@
 <body>
   <h1>Lotto Number Generator</h1>
   <form id="user-form">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+    <label for="first-name">First Name:</label>
+    <input type="text" id="first-name" required>
+    <br>
+    <label for="last-name">Last Name:</label>
+    <input type="text" id="last-name" required>
+    <br>
     <label for="dob">Date of Birth:</label>
-    <input type="date" id="dob" name="dob" required>
-    <button type="submit">Generate</button>
+    <input type="date" id="dob" required>
+    <br>
+    <input type="submit" value="Generate Numbers">
   </form>
+  
   <div id="results" hidden>
     <h2>Generated Numbers:</h2>
     <ul id="numbers-list"></ul>
