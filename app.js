@@ -3,7 +3,7 @@ document.getElementById('user-form').addEventListener('submit', async (e) => {
     const firstName = document.getElementById('first-name').value;
     const lastName = document.getElementById('last-name').value;
     const dob = document.getElementById('dob').value;
-    const apiUrl = 'https://danielschung.pythonanywhere.com/generate';
+    const apiUrl = '/api/generate';
   
     // No need to split the name anymore, as we have separate input fields
   
